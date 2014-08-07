@@ -1,0 +1,45 @@
+.mainimg {
+	position: relative;
+	.mainimg-object {
+		height: 315px;
+		background-color: #f2ffe5;
+	}
+	.mainimg-sub {
+		@include border-radius(5px);
+		position: absolute;
+		bottom: 10px;
+		right: 0;
+		width: 288px;
+		height: 275px;
+		padding: 10px;
+		background-color: #ffffff;
+		border: 1px solid #cccccc;
+		.mainimg-sub-txt {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+		.mainimg-sub-link {
+			display: block;
+			margin-top: 5px;
+			text-align: right;
+			font-size: 14px;
+		}
+	}
+}
+
+.banner_list {
+	background-color: #cccccc;
+	padding: 10px;
+	li {
+		margin-top: 7px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.dummy {
+	width: 290px;
+	height: 150px;
+	background-color: #f2ffe5;
+}

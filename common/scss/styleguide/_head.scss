@@ -1,0 +1,54 @@
+/*
+Buttons
+
+Button styles can be applied to anything with the `.btn` class applied.
+However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+
+Styleguide 1
+*/
+
+/*
+Heading
+
+見出しのモジュールです。
+
+.title - フォントサイズを14pxにしちゃいます。（モジュールの付属classの説明とか）
+.red - 赤くしちゃいます。（モジュールの付属classの説明とか）
+
+Markup:
+<h2 class="mod-heading {$modifiers}">見出し</h2>
+
+Styleguide 1.1
+*/
+.mod-heading {
+    border-left: 5px solid #B7B800;
+    padding-left: 8px;
+    &.title {
+        font-size: 14px;
+    }
+    &.red {
+    	color: red;
+    }
+}
+
+
+/*
+Heading2
+
+見出しのモジュールです。
+
+Markup:
+<h2 class="mod-heading {$modifiers}">見出し</h2>
+
+Styleguide 1.2
+*/
+.mod-heading {
+    border-left: 5px solid #B7B800;
+    padding-left: 8px;
+    &.title {
+        font-size: 14px;
+    }
+    &.red {
+    	color: red;
+    }
+}

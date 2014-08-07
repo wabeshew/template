@@ -1,0 +1,122 @@
+/*
+Buttons
+
+Button styles can be applied to anything with the `.btn` class applied.
+However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+
+Styleguide 2
+*/
+
+
+/*
+test-module
+
+見出しのモジュールです。
+
+Markup:
+<div class="zeroalert">
+	<div class="zeroalert-header">
+		<div class="zeroalert-header-title">検討候補に登録している施設はありません</div>
+		<div class="zeroalert-header-text">興味をもった施設があったら、検討候補に追加してみましょう。検討候補には最大20件まで登録することができます。<br>施設を検討候補に登録すると、複数の施設を比較検討したり、まとめて資料請求や見学予約をしたりできます。</div>
+	</div>
+	<div class="zeroalert-body">
+		<ul>
+			<li>
+				<div class="flow">
+					<div class="flow-object">
+						<img src="/assets/img/my/flow_01.png" width="256" height="240" alt="">
+					</div>
+					<p class="flow-text">一覧ページや施設詳細ページで「興味あり」ボタンを押すと、「検討候補一覧」に登録できます。</p>
+					<span class="ui-icon ui-icon--step01 flow-icon"></span>
+					<span class="ui-icon ui-icon--arrowr06 flow-arrow"></span>
+				</div>
+			</li>
+			<li>
+				<div class="flow">
+					<div class="flow-object">
+						<img src="/assets/img/my/flow_02.png" width="256" height="240" alt="">
+					</div>
+					<p class="flow-text">比較表を利用すれば、費用や医療受け入れ体制など、気になる箇所を比較できます。</p>
+					<span class="ui-icon ui-icon--step02 flow-icon"></span>
+					<span class="ui-icon ui-icon--arrowr06 flow-arrow"></span>
+				</div>
+			</li>
+			<li>
+				<div class="flow">
+					<div class="flow-object">
+						<img src="/assets/img/my/flow_03.png" width="256" height="240" alt="">
+					</div>
+					<p class="flow-text">ご希望の施設には、まとめて資料請求したり、見学予約したりできます。</p>
+					<span class="ui-icon ui-icon--step03 flow-icon"></span>
+				</div>
+			</li>
+		</ul>
+		<div class="zeroalert-body-action"><a href="#" class="ui-btn ui-btn--trans ui-btn--icon_default m_parent_t-btn--trans"><span class="ui-icon ui-icon--arrowleft01 ui-icon--01"></span>トップに戻って介護施設を探す</a></div>
+	</div>
+</div>
+
+Styleguide 2.1
+*/
+.zeroalert {
+	@include border-radius(10px);
+	border: 2px solid #a1be82;
+	background-color: #ffffff;
+	.zeroalert-header {
+		position: relative;
+		padding: 20px;
+		border-bottom: 1px solid #cccccc;
+		line-height: 1.5;
+		.zeroalert-header-title {
+			font-size: 18px;
+			font-weight: bold;
+			color: #2b5700;
+		}
+		.zeroalert-header-text {
+			color: #2b5700;
+		}
+	}
+	.zeroalert-body {
+		padding: 20px;
+		ul {
+			@extend %cf;
+			li {
+				float: left;
+				margin-left: 20px;
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+		}
+		.zeroalert-body-action {
+			margin-top: 20px;
+			padding: 15px 0;
+			background-color: #f2f2f2;
+			text-align: center;
+		}
+	}
+}
+
+.flow {
+	position: relative;
+	@include border-radius(4px);
+	@include box-shadow(#ededed 0 -2px 0 0 inset);
+	width: 254px;
+	padding: 20px;
+	border: 2px solid #2f5e00;
+	background-color: #ffffff;
+	.flow-icon {
+		@include abs-top-left(-12, -12);
+	}
+	.flow-arrow {
+		position: absolute;
+		top: 50%;
+		right: -18px;
+		margin-top: -26px;
+	}
+	.flow-text {
+		text-align: center;
+		margin-top: 15px;
+		color: #2b5700;
+		font-size: 16px;
+	}
+}

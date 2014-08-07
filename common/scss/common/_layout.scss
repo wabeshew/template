@@ -1,0 +1,29 @@
+// ************************************************************
+//  ヘッダー、フッターや全体に関わるレイアウトについて記述します ※接頭辞には、l-(エルハイフン)
+// ************************************************************
+
+// l-wrapper
+.l-wrapper {
+    background-color: #ffffff;
+}
+// l-header
+.l-header {
+}
+
+// l-contents
+.l-contents {
+    @extend %cf;
+    .l-contents-main {
+        float: left;
+    }
+    .l-contents-sub {
+        float: right;
+    }
+    &.l-contents--full {
+        width: 100%;
+    }
+}
+
+// l-footer
+.l-footer {
+}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+// ************************************************************
+//  @compass
+// ************************************************************
+//compassの全機能をインポート
+@import "compass";
+
+// ************************************************************
+//  @sprite
+// ************************************************************
+@import "sprite/*.png";
+@include all-sprite-sprites($dimensions: true);
+
+// ************************************************************
+//  @import
+// ************************************************************
+//共通scssを記述
+@import "../common/base.scss";
+@import "../common/header.scss";
+@import "../common/footer.scss";
+@import "../common/helper.scss";
+@import "../common/layout.scss";
+@import "../common/reset.scss";
+@import "../common/setting.scss";
+@import "../common/ui.scss";
+
+//独自scssを記述
+@import "test-module.scss";

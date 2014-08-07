@@ -1,0 +1,197 @@
+/*
+nav
+
+Nav styles can be applied to anything with the `.nav` class applied.
+However, typically you'll want to apply these to only `<a>` and `<button>` elements for the best rendering.
+
+Styleguide 3
+*/
+
+/*
+Heading
+
+ナビゲーションのモジュールです。
+
+Markup:
+<div class="nav1_1">
+    <nav class="gnav {$modifiers}">
+        <ul>
+            <li><a href="#" class="gnav-menu">top</a></li>
+            <li><a href="#" class="gnav-menu">about</a></li>
+            <li><a href="#" class="gnav-menu">works</a></li>
+            <li><a href="#" class="gnav-menu">acsess</a></li>
+            <li><a href="#" class="gnav-menu">contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+Styleguide 3.1
+*/
+.nav1_1 {
+    .gnav {
+        >ul {
+            @extend %cf;
+            >li {
+                float: left;
+                border-left: 1px solid rgba(0, 0, 0, 1);
+                &:first-child {
+                    border: 0;
+                }
+            }
+        }
+        .gnav-menu {
+            display: table-cell;
+            vertical-align: middle;
+            width: 195px;
+            height: 25px;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: 1px -1px 0 rgba(0,0,0,1);
+            @include background-image(linear-gradient(top, #434343, #222222));
+            @include filter-gradient(#434343, #222222, vertical);
+            @include box-shadow(rgba(255, 255, 255, .2) -1px 0 0 inset);
+            @include transition-duration(0.3s);
+            &:hover {
+                @include opacity(0.8);
+            }
+        }
+    }
+}
+
+
+/*
+Heading
+
+ナビゲーションのモジュールです。
+
+.title - フォントサイズを14pxにしちゃいます。（モジュールの付属classの説明とか）
+
+Markup:
+<div class="nav1_2">
+    <nav class="gnav {$modifiers}">
+        <div class="gnav-logo">test</div>
+        <ul>
+            <li><a href="#" class="gnav-menu">top</a></li>
+            <li><a href="#" class="gnav-menu">about</a></li>
+            <li><a href="#" class="gnav-menu">works</a></li>
+            <li><a href="#" class="gnav-menu">acsess</a></li>
+            <li><a href="#" class="gnav-menu">contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+Styleguide 3.2
+*/
+.nav1_2 {
+    .gnav {
+        @extend %cf;
+        @include background-image(linear-gradient(top, #434343, #222222));
+        @include filter-gradient(#434343, #222222, vertical);
+        >ul {
+            @extend %cf;
+            float: right;
+            >li {
+                float: left;
+                border-left: 1px solid rgba(0, 0, 0, 1);
+            }
+        }
+        .gnav-logo {
+            float: left;
+            width: 25px;
+            color: #ffffff;
+        }
+        .gnav-menu {
+            display: table-cell;
+            vertical-align: middle;
+            width: 100px;
+            height: 25px;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: 1px -1px 0 rgba(0,0,0,1);
+            @include box-shadow(rgba(255, 255, 255, .2) 1px 0 0 inset);
+            @include transition-duration(0.3s);
+            &:hover {
+                @include opacity(0.8);
+            }
+        }
+    }
+}
+
+
+/*
+Heading2
+
+ナビゲーションのモジュールです。
+サブリストがあるタイプです。
+
+Markup:
+<nav class="gnav">
+    <ul>
+        <li>
+            <a href="#" class="gnav-menu">top</a>
+            <ul class="submenu">
+                <li><a href="#" class="submenu-list">tetetete</a></li>
+                <li><a href="#" class="submenu-list">tetetete</a></li>
+                <li><a href="#" class="submenu-list">tetetete</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="gnav-menu">about</a></li>
+        <li><a href="#" class="gnav-menu">works</a></li>
+        <li><a href="#" class="gnav-menu">acsess</a></li>
+        <li><a href="#" class="gnav-menu">contact</a></li>
+    </ul>
+</nav>
+
+Styleguide 3.3
+*/
+.nav1_3 {
+    .gnav {
+        >ul {
+            @extend %cf;
+            >li {
+                float: left;
+                border-left: 1px solid rgba(0, 0, 0, 1);
+                &:first-child {
+                    border: 0;
+                }
+            }
+        }
+        .gnav-menu {
+            display: table-cell;
+            vertical-align: middle;
+            width: 195px;
+            height: 25px;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: 1px -1px 0 rgba(0,0,0,1);
+            @include background-image(linear-gradient(top, #434343, #222222));
+            @include filter-gradient(#434343, #222222, vertical);
+            @include box-shadow(rgba(255, 255, 255, .2) -1px 0 0 inset);
+            &:hover {
+                @include opacity(0.8);
+            }
+        }
+    }
+
+    .submenu {
+        .submenu-list {
+            display: table-cell;
+            vertical-align: middle;
+            width: 195px;
+            height: 25px;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: 1px -1px 0 rgba(0,0,0,1);
+            @include background-image(linear-gradient(top, #434343, #222222));
+            @include filter-gradient(#434343, #222222, vertical);
+            @include box-shadow(rgba(255, 255, 255, .2) -1px 0 0 inset);
+            &:hover {
+                @include opacity(0.8);
+            }
+        }
+    }
+}
