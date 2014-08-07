@@ -1,6 +1,6 @@
-siteName: CodeGrid assemble demo
+siteName: test assemble demo
 footerLinks:
-  - title: CodeGrid
+  - title: test
     url: http://www.codegrid.net/
   - title: github repository
     url: https://github.com/pxgrid/codegrid-assemble
