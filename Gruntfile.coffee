@@ -5,13 +5,13 @@ module.exports = (grunt) ->
   grunt.initConfig
     # 各種パスの設定
     path:
-      'sass': 'common/scss'
-      'css': 'common/css'
-      'js': 'common/js'
+      'sass': 'app/scss'
+      'css': 'app/css'
+      'js': 'app/js'
       'styleguide': 'styleguide'
-      'img_dev': 'common/img'
-      'img_ass': 'common/ass-img'
-      'sprite': 'common/img/sprite'
+      'img_dev': 'app/img'
+      'img_ass': 'app/ass-img'
+      'sprite': 'app/img/sprite'
       'assemble': 'src'
 
     # compassタスク
