@@ -18,7 +18,7 @@ module.exports = (grunt) ->
     compass:
       dev:
         options:
-          sassDir: '<%= path.sass %>/test'
+          sassDir: '<%= path.sass %>/common'
           cssDir: '<%= path.css %>'
           noLineComments: true
           debugInfo: false
