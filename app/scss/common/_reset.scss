@@ -44,7 +44,7 @@ $resetCSS: 1 !default;
   footer,header,hgroup,menu,nav,section {
     display:block;
   }
-  nav ul {
+  nav, ul {
     list-style:none;
   }
   blockquote, q {
