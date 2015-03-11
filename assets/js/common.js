@@ -41,3 +41,26 @@ function _getFlickrPhotos(data){
 		// fail の場合の処理
 	}
 }
+
+
+// メンテ後試す
+// $(function(){
+// 	$.jsonp({
+// 		url : 'https://www.flickr.com/services/rest/',
+// 		data : {
+// 			format : 'json',
+// 			method : 'flickr.photos.search', // 必須 :: 実行メソッド名
+// 			api_key : '2df094fb5c68863fe6d9952dbc88d33a', // 必須 :: API Key
+// 			user_id : '128934768@N02', // 任意 :: userID
+// 			per_page : '100' // 任意 :: 1回あたりの取得件数
+// 		},
+// 		dataType : 'jsonp',
+// 		jsonp : 'jsoncallback', // Flickrの場合はjsoncallback
+// 		success: function(json) {
+// 			_getFlickrPhotos;
+// 		},
+// 		error: function() {
+// 			$('<div>Flickrはメンテナンス中だよ。Bad,bad!Panda!</div>').replaceAll('#js-photoList');
+// 		}
+// 	});
+// });
