@@ -24,6 +24,7 @@ module.exports = (grunt) ->
           debugInfo: false
           environment: 'development'
           force: true
+          bundleExec: true
       style:
         options:
           sassDir: '<%= path.sass %>/<%= path.styleguide %>'
@@ -32,6 +33,7 @@ module.exports = (grunt) ->
           debugInfo: true
           environment: 'production'
           force: true
+          bundleExec: true
       sprite:
         options:
           sassDir: '<%= path.sass %>/test'
@@ -42,6 +44,7 @@ module.exports = (grunt) ->
           outputStyle: 'expanded'
           environment: 'development'
           force: true
+          bundleExec: true
 
     # ファイル監視タスク（監視対象と実行タスク）
     watch:
