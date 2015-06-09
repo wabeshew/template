@@ -59,6 +59,7 @@ module.exports = (grunt) ->
         tasks: [
           'compass:dev'
           'notify:sass'
+          'csscomb'
         ]
         options:
           livereload: true,
@@ -158,10 +159,22 @@ module.exports = (grunt) ->
       dynamic:
         files: [{
           expand: true
-          cwd: '<%= path.img_dev %>'# カレントディレクトリの設定
+          cwd: '<%= path.img_dev %>'
+          #カレントディレクトリの設定
           src: ['*.png']
           dest: '<%= path.img_dev %>'
         }]
+
+    #CSS最適化
+    csscomb:
+      options:
+        config: 'csscomb.json'
+      dynamic_mappings:
+        expand: true
+        cwd: 'assets/css/'
+        src: ['*.css']
+        dest: 'assets/css/'
+        force: true
 
   # grunt実行時に実行するタスク
   grunt.registerTask 'dev', ['connect', 'watch']

@@ -1,9 +1,10 @@
 .photolist {
 	@extend %cf;
 	li {
-		float: left;
-		width: 200px;
 		height: 200px;
 		overflow: hidden;
+		float: left;
+		width: 200px;
+		line-height: 100px;
 	}
 }

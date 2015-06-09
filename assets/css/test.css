@@ -1,187 +1,177 @@
-@charset "UTF-8";
-.l-contents:after, .photolist:after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 0;
-  visibility: hidden;
+@charset 'UTF-8';
+.l-contents:after,.photolist:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '';
 }
 
-.l-contents, .photolist {
-  min-height: 1px;
-  _height: 1px;
+.l-contents,.photolist {
+    min-height: 1px;
+
+    _height: 1px;
 }
 
 .l-wrapper {
-  background-color: #ffffff;
+    background-color: #fff;
 }
 
 .l-contents .l-contents-main {
-  float: left;
+    float: left;
 }
 .l-contents .l-contents-sub {
-  float: right;
+    float: right;
 }
 .l-contents.l-contents--full {
-  width: 100%;
+    width: 100%;
 }
 
-/*
+/*!
  * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
  * Richard Clark (http://richclarkdesign.com)
  * http://cssreset.com
  */
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    outline: 0;
+    background: transparent;
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
 }
 
-nav, ul {
-  list-style: none;
+nav,ul {
+    list-style: none;
 }
 
-blockquote, q {
-  quotes: none;
+blockquote,q {
+    quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
+blockquote:before,blockquote:after,q:before,q:after {
+    content: '';
+    content: none;
 }
 
 a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 /* change colours to suit your needs */
 ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
+    text-decoration: none;
+    color: #000;
+    background-color: #ff9;
 }
 
 /* change colours to suit your needs */
 mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
+    font-weight: bold;
+    font-style: italic;
+    color: #000;
+    background-color: #ff9;
 }
 
 del {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
+abbr[title],dfn[title] {
+    cursor: help;
+    border-bottom: 1px dotted;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
 }
 
 /* change border colour to suit your needs */
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #ccc;
 }
 
-input, select {
-  vertical-align: middle;
+input,select {
+    vertical-align: middle;
 }
 
-body, select, textarea, th, td, li, a, input {
-  font-family: 'メイリオ','meiryo','ＭＳ Ｐゴシック','MS P Gothic','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ヒラギノ丸ゴシック Pro W3','Hiragino maru Gothic Pro','Helvetica','sans-serif';
+body,select,textarea,th,td,li,a,input {
+    font-family: 'メイリオ','meiryo','ＭＳ Ｐゴシック','MS P Gothic','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ヒラギノ丸ゴシック Pro W3','Hiragino maru Gothic Pro','Helvetica','sans-serif';
 }
 
 body {
-  background-color: #ffffff;
+    background-color: #fff;
 }
 
-body, select, textarea {
-  color: #333333;
-  font-size: 14px;
-  line-height: 1.4;
+body,select,textarea {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
 }
 
 a {
-  cursor: pointer;
-  color: #004cca;
+    cursor: pointer;
+    color: #004cca;
 }
 a img:hover {
-  opacity: .8;
-  filter: alpha(opacity=80);
+    opacity: .8;
+
+    filter: alpha(opacity=80);
 }
 
 a:link {
-  color: #004cca;
+    color: #004cca;
 }
 
 a:hover {
-  color: #d93e00;
-  text-decoration: underline;
+    text-decoration: underline;
+    color: #d93e00;
 }
 
 a:active {
-  color: #d93e00;
-  text-decoration: underline;
+    text-decoration: underline;
+    color: #d93e00;
 }
 
 a:visited {
-  color: #7359b2;
+    color: #7359b2;
 }
 
-div, p, dl, dt, dd, ul, ol, li, a, span {
-  word-break: break-all;
+div,p,dl,dt,dd,ul,ol,li,a,span {
+    word-break: break-all;
 }
 
 sup {
-  vertical-align: top;
+    vertical-align: top;
 }
 
 label {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .photolist li {
-  float: left;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
+    line-height: 100px;
+    float: left;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
 }
