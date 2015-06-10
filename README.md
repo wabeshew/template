@@ -19,3 +19,7 @@ $ grunt sprite  スプライト画像生成用<br>
 $ grunt ass     アセンブル（テンプレート）構築用<br>
 $ grunt html    HTMLリント<br>
 $ grunt css     CSSリントぉ
+
+##調査なう
+`rbenv local <バージョン>`でインストールするとパスがおかしくなる<br>
+→なぜか、userからになっちゃう。
