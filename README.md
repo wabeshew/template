@@ -18,4 +18,4 @@ $ grunt style   スタイルガイド生成用<br>
 $ grunt sprite  スプライト画像生成用<br>
 $ grunt ass     アセンブル（テンプレート）構築用<br>
 $ grunt html    HTMLリント<br>
-$ grunt css     CSSリント
+$ grunt css     CSSリントぉ
