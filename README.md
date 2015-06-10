@@ -1,16 +1,21 @@
 template
 ========
-#Usage
-1. Install sass & Compass
-```bundle install```
-※ローカルにsass,Compassをインストールします。
- グローバルを汚染しないように...
+  作業効率化のための自分用テンプレート。
+  随時アップデートしております。
 
-その後 "npm install" を行います。
+##Usage
+###1. Install Sass & Compass
+以下を実行して、*Sass*と*Compass*をローカルにインストールします。
+`$ bundle install`
 
-grunt dev		開発用
-grunt style 	スタイルガイド生成用
-grunt sprite 	スプライト画像生成用
-grunt ass 		アセンブル（テンプレート）構築用
-grunt html 		HTMLリント
-grunt css 		CSSリント
+###2. npm install
+以下を実行して、`package.json`の内容をインストール。
+`$ npm install`
+
+##Grunt command
+$ grunt dev   開発用
+$ grunt style   スタイルガイド生成用
+$ grunt sprite  スプライト画像生成用
+$ grunt ass     アセンブル（テンプレート）構築用
+$ grunt html    HTMLリント
+$ grunt css     CSSリント
