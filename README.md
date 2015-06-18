@@ -4,11 +4,15 @@ template
 随時アップデートしております。
 
 ##Usage
-###1. Install Sass & Compass
+###1. Install local ruby
+以下を実行して、任意バージョンのrubyをローカルにインストールします。<br>
+`$ rbenv local <rubyのバージョン>`
+
+###2. Install Sass & Compass
 以下を実行して、*Sass*と*Compass*をローカルにインストールします。<br>
 `$ bundle install`
 
-###2. npm install
+###3. npm install
 以下を実行して、`package.json`の内容をインストール。<br>
 `$ npm install`
 
