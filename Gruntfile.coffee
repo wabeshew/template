@@ -1,6 +1,8 @@
 module.exports = (grunt) ->
   #jit-gruntでプラグインを一括で使えるようにする
-  require('jit-grunt')(grunt);
+  require('jit-grunt') grunt,
+    browserSync: 'grunt-browser-sync'
+
   #各タスクの詳細設定
   grunt.initConfig
     # 各種パスの設定
@@ -49,8 +51,10 @@ module.exports = (grunt) ->
     # ファイル監視タスク（監視対象と実行タスク）
     watch:
       html:
-        files: '*.html'
-        tasks: ['notify:html']
+        files: '**/*.html'
+        tasks: [
+          'notify:html'
+        ]
         options:
           livereload: true,
           spawn: false
@@ -81,13 +85,27 @@ module.exports = (grunt) ->
           livereload: true,
           spawn: false
 
-    # ローカルサーバ起動タスク
+    # ローカルサーバ起動タスク（一応残し）
     connect:
       server:
         options:
           hostname: '*'
           port: 12345
           base: './'
+
+    # ローカルサーバ起動タスク
+    browserSync:
+      files:
+        src: [
+          '**/*.html',
+          '<%= path.css %>/**/*.css',
+          '**/*.js'
+        ]
+      options:
+        watchTask: true
+        port: 8000
+        server:
+          baseDir: ['./']
 
     #お知らせ機能
     notify:
@@ -177,10 +195,10 @@ module.exports = (grunt) ->
         force: true
 
   # grunt実行時に実行するタスク
-  grunt.registerTask 'dev', ['connect', 'watch']
-  grunt.registerTask 'styleguide', ['compass:style', 'kss', 'connect', 'watch']
-  grunt.registerTask 'sprite', ['compass:sprite', 'clean:sprite', 'newer:imagemin:dynamic', 'notify:sprite', 'connect', 'watch']
-  grunt.registerTask 'ass', ['assemble', 'connect', 'watch']
+  grunt.registerTask 'dev', ['browserSync', 'watch']
+  grunt.registerTask 'styleguide', ['compass:style', 'kss', 'browserSync', 'watch']
+  grunt.registerTask 'sprite', ['compass:sprite', 'clean:sprite', 'newer:imagemin:dynamic', 'notify:sprite', 'browserSync', 'watch']
+  grunt.registerTask 'ass', ['assemble', 'browserSync', 'watch']
   grunt.registerTask 'html', ['htmlhint:dev']
   grunt.registerTask 'css', ['csslint:dev']
   grunt.registerTask 'img', ['newer:imagemin:dynamic']

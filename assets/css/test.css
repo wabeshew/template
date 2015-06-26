@@ -169,9 +169,10 @@ label {
 }
 
 .photolist li {
-    line-height: 100px;
+    line-height: 400px;
     float: left;
     overflow: hidden;
     width: 200px;
     height: 200px;
+    margin-left: 0;
 }
