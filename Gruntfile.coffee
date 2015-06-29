@@ -64,6 +64,7 @@ module.exports = (grunt) ->
           'compass:dev'
           'notify:sass'
           'csscomb'
+          'autoprefixer'
         ]
         options:
           livereload: true,
@@ -183,7 +184,7 @@ module.exports = (grunt) ->
           dest: '<%= path.img_dev %>'
         }]
 
-    #CSS最適化
+    # CSS最適化
     csscomb:
       options:
         config: 'csscomb.json'
@@ -193,6 +194,17 @@ module.exports = (grunt) ->
         src: ['*.css']
         dest: 'assets/css/'
         force: true
+
+    # オートプリフィックス
+    autoprefixer:
+      options:
+        # ブラウザの対応バージョンをオプションで決定できます。
+        browsers: ['last 2 version', 'ie 8']
+      file:
+        expand: true,
+        flatten: true,
+        src: '<%= path.css %>/*.css'
+        dest: '<%= path.css %>'
 
   # grunt実行時に実行するタスク
   grunt.registerTask 'dev', ['browserSync', 'watch']

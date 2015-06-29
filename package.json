@@ -32,6 +32,7 @@
     "grunt-kss": "~0.3.1",
     "grunt-newer": "~0.7.0",
     "grunt-notify": "~0.3.0",
-    "jit-grunt": "~0.7.0"
+    "jit-grunt": "~0.7.0",
+    "grunt-autoprefixer": "^3.0.3",
   }
 }
