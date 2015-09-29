@@ -2,17 +2,19 @@ module.exports = (grunt) ->
   #jit-gruntでプラグインを一括で使えるようにする
   require('jit-grunt') grunt,
     browserSync: 'grunt-browser-sync'
+    replace: 'grunt-text-replace'
 
   #各タスクの詳細設定
   grunt.initConfig
     # 各種パスの設定
     path:
+      'ass' : 'assets'
       'sass': 'develop/scss'
       'css': 'assets/css'
       'js': 'assets/js'
       'styleguide': 'styleguide'
-      'img_dev': 'assets/img'
-      'img_ass': 'assets/ass-img'
+      'img_dev': 'develop/img'
+      'img_ass': 'assets/img'
       'sprite': 'assets/img/sprite'
       'assemble': 'src'
 
@@ -22,6 +24,7 @@ module.exports = (grunt) ->
         options:
           sassDir: '<%= path.sass %>/test'
           cssDir: '<%= path.css %>'
+          imagesDir: '<%= path.img_dev %>'
           noLineComments: true
           debugInfo: false
           environment: 'development'
@@ -31,6 +34,7 @@ module.exports = (grunt) ->
         options:
           sassDir: '<%= path.sass %>/<%= path.styleguide %>'
           cssDir: '<%= path.css %>'
+          imagesDir: '<%= path.img_dev %>'
           noLineComments: true
           debugInfo: true
           environment: 'production'
@@ -65,6 +69,9 @@ module.exports = (grunt) ->
           'notify:sass'
           'csscomb'
           'autoprefixer'
+          'newer:imagemin:dynamic'
+          'clean:sprite'
+          'replace:spritedir'
         ]
         options:
           livereload: true,
@@ -106,7 +113,7 @@ module.exports = (grunt) ->
         watchTask: true
         port: 8000
         server:
-          baseDir: ['./']
+          baseDir: ['./assets']
 
     #お知らせ機能
     notify:
@@ -159,7 +166,7 @@ module.exports = (grunt) ->
         htmlhintrc: '.htmlhintrc'
         force: true
       dev:
-        src: ['/']
+        src: ['<%= path.ass %>/*.html']
 
     # csslintタスク
     csslint:
@@ -180,8 +187,8 @@ module.exports = (grunt) ->
           expand: true
           cwd: '<%= path.img_dev %>'
           #カレントディレクトリの設定
-          src: ['*.png']
-          dest: '<%= path.img_dev %>'
+          src: ['*.png','sprite/*.png', '!sprite/*--*.png']
+          dest: '<%= path.img_ass %>'
         }]
 
     # CSS最適化
@@ -205,6 +212,16 @@ module.exports = (grunt) ->
         flatten: true,
         src: '<%= path.css %>/*.css'
         dest: '<%= path.css %>'
+
+    # スプライト画像の向き先をassetsに書き換え
+    replace:
+      spritedir:
+        src: ['<%= path.css %>/*.css']
+        overwrite: true
+        replacements: [
+          from: '<%= path.img_dev %>'
+          to: '<%= path.img_ass %>'
+        ]
 
   # grunt実行時に実行するタスク
   grunt.registerTask 'dev', ['browserSync', 'watch']

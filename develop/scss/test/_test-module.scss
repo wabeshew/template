@@ -9,3 +9,6 @@
 		line-height: 400px;
 	}
 }
+
+// スプライト自動生成用記述
+$icon-: sprite-map("sprite/icon-/*.png", $layout: smart);

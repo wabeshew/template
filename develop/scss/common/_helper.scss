@@ -3,17 +3,12 @@
 // ************************************************************
 
 //Placeholder Selectors
-%cf:after {
-    content: "";
-    display: block;
-    clear: both;
-    height: 0;
-    visibility: hidden;
+%cf:before, %cf:after {
+    content:"";
+    display:table
 }
-%cf {
-    min-height: 1px;
-    _height: 1px;
-}
+%cf:after { clear:both }
+%cf { zoom:1 } /* For IE 6/7 */
 
 %ir {
     text-indent: -9999px;

@@ -1,18 +1,35 @@
 @charset 'UTF-8';
-.l-contents:after,.photolist:after {
-    display: block;
-    visibility: hidden;
-    clear: both;
-    height: 0;
+.icon--sprite,.icon--coupon_01,.icon--coupon_02 {
+    background-image: url('/assets/img/sprite/icon-.png');
+    background-repeat: no-repeat;
+}
+
+.icon--coupon_01 {
+    width: 771px;
+    height: 168px;
+    background-position: 0 0;
+}
+
+.icon--coupon_02 {
+    width: 223px;
+    height: 190px;
+    background-position: 0 -168px;
+}
+
+.l-contents:before,.photolist:before,.l-contents:after,.photolist:after {
+    display: table;
     content: '';
 }
 
-.l-contents,.photolist {
-    min-height: 1px;
-
-    _height: 1px;
+.l-contents:after,.photolist:after {
+    clear: both;
 }
 
+.l-contents,.photolist {
+    zoom: 1;
+}
+
+/* For IE 6/7 */
 .l-wrapper {
     background-color: #fff;
 }
