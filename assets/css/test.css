@@ -1,21 +1,4 @@
 @charset 'UTF-8';
-.icon--sprite,.icon--coupon_01,.icon--coupon_02 {
-    background-image: url('/assets/img/sprite/icon-.png');
-    background-repeat: no-repeat;
-}
-
-.icon--coupon_01 {
-    width: 771px;
-    height: 168px;
-    background-position: 0 0;
-}
-
-.icon--coupon_02 {
-    width: 223px;
-    height: 190px;
-    background-position: 0 -168px;
-}
-
 .l-contents:before,.photolist:before,.l-contents:after,.photolist:after {
     display: table;
     content: '';
@@ -44,11 +27,7 @@
     width: 100%;
 }
 
-/*!
- * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
- * Richard Clark (http://richclarkdesign.com)
- * http://cssreset.com
- */
+/*! My Reset CSS */
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
     font-size: 100%;
     margin: 0;
@@ -129,6 +108,10 @@ hr {
 
 input,select {
     vertical-align: middle;
+}
+
+img {
+    vertical-align: top;
 }
 
 body,select,textarea,th,td,li,a,input {

@@ -113,7 +113,7 @@ module.exports = (grunt) ->
         watchTask: true
         port: 8000
         server:
-          baseDir: ['./assets']
+          baseDir: ['./']
 
     #お知らせ機能
     notify:
