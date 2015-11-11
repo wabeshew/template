@@ -1,1 +1,7 @@
+### Local ###
 .DS_Store
+.ruby-version
+Gemfile.lock
+
+node_modules
+vendor
